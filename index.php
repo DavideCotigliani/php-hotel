@@ -20,7 +20,6 @@
                 </tr>
             </thead>
             <tbody>
-
                 <?php
                 $hotels= [
                     ['name' => 'Hotel Belvedere',
@@ -56,10 +55,13 @@
             
                 //utilizzo un foreach per stampare tutti gli hotel
                 foreach($hotels as $hotel){
-                foreach ($hotel as $key => $value){
-                    echo  $key . ": $value <br>";
+                    echo "<tr>";
+                    echo " <td>$hotel[name] </td>";
+                    echo " <td>$hotel[description] </td>";
+                    echo " <td>" . ($hotel["parking"] ? "Sì" : "No") . "</td>";
+                    echo " <td>$hotel[vote] </td>";
+                    echo " <td>$hotel[distance_to_center] </td>";
                 }
-               }
                 ?>
             </tbody>
         </table>
