@@ -37,8 +37,14 @@
         'parking' => true,
         'vote'=> 2,
         'distance_to_center'=> 50],
-    ]
-    
+    ];
+
+    //utilizzo un foreach per stampare tutti gli hotel
+    foreach($hotels as $hotel){
+    foreach ($hotel as $key => $value){
+        echo  $key . ": $value <br>";
+    }
+   }
     ?>
 </body>
 </html>
